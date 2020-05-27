@@ -3,34 +3,15 @@
     <section class="intro">
       <h1>Get the latest tech news</h1>
     </section>
-    <section class="featured-posts">
-      <PostPreview
-        id="1"
-        thumbnail="https://res-3.cloudinary.com/fieldfisher/image/upload/c_lfill,g_auto/f_auto,q_auto/v1/sectors/technology/tech_neoncircuitboard_857021704_medium_lc5h05"
-        title="test"
-        previewText="Hi there ...."
-      />
-      <PostPreview
-        id="2"
-        thumbnail="https://res-3.cloudinary.com/fieldfisher/image/upload/c_lfill,g_auto/f_auto,q_auto/v1/sectors/technology/tech_neoncircuitboard_857021704_medium_lc5h05"
-        title="test 2"
-        previewText="Hi there 2...."
-      />
-      <PostPreview
-        id="3"
-        thumbnail="https://res-3.cloudinary.com/fieldfisher/image/upload/c_lfill,g_auto/f_auto,q_auto/v1/sectors/technology/tech_neoncircuitboard_857021704_medium_lc5h05"
-        title="test 3"
-        previewText="Hi there 3...."
-      />
-    </section>
+    <PostList />
   </div>
 </template>
 
 <script>
-import PostPreview from '@/components/Posts/PostPreview';
+import PostList from '@/components/Posts/PostList';
 export default {
   components: {
-    PostPreview
+    PostList
   }
 };
 </script>
@@ -43,6 +24,7 @@ export default {
   box-sizing: border-box;
   background-position: center;
   background-size: cover;
+  background-image: url(~assets/images/main-page-background.jpg);
 }
 
 .intro h1 {
@@ -64,14 +46,5 @@ export default {
   .intro h1 {
     font-size: 2rem;
   }
-}
-
-.featured-posts {
-  display: flex;
-  padding: 20px;
-  box-sizing: border-box;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
 }
 </style>
