@@ -4,36 +4,35 @@
       <h1>Get the latest tech news</h1>
     </section>
     <section class="featured-posts">
-      <nuxt-link :to="'/posts/' + 1" class="post-preview">
-        <article>
-          <div
-            class="post-thumbnail"
-            style="background-image:url('https://res-3.cloudinary.com/fieldfisher/image/upload/c_lfill,g_auto/f_auto,q_auto/v1/sectors/technology/tech_neoncircuitboard_857021704_medium_lc5h05')"
-          ></div>
-          <div class="post-content">
-            <h1>Post Title</h1>
-            <p>Preview Text</p>
-          </div>
-        </article>
-      </nuxt-link>
-      <nuxt-link :to="'/posts/' + 1" class="post-preview">
-        <article>
-          <div
-            class="post-thumbnail"
-            style="background-image:url('https://res-3.cloudinary.com/fieldfisher/image/upload/c_lfill,g_auto/f_auto,q_auto/v1/sectors/technology/tech_neoncircuitboard_857021704_medium_lc5h05')"
-          ></div>
-          <div class="post-content">
-            <h1>Post Title 2</h1>
-            <p>Preview Text 2</p>
-          </div>
-        </article>
-      </nuxt-link>
+      <PostPreview
+        id="1"
+        thumbnail="https://res-3.cloudinary.com/fieldfisher/image/upload/c_lfill,g_auto/f_auto,q_auto/v1/sectors/technology/tech_neoncircuitboard_857021704_medium_lc5h05"
+        title="test"
+        previewText="Hi there ...."
+      />
+      <PostPreview
+        id="2"
+        thumbnail="https://res-3.cloudinary.com/fieldfisher/image/upload/c_lfill,g_auto/f_auto,q_auto/v1/sectors/technology/tech_neoncircuitboard_857021704_medium_lc5h05"
+        title="test 2"
+        previewText="Hi there 2...."
+      />
+      <PostPreview
+        id="3"
+        thumbnail="https://res-3.cloudinary.com/fieldfisher/image/upload/c_lfill,g_auto/f_auto,q_auto/v1/sectors/technology/tech_neoncircuitboard_857021704_medium_lc5h05"
+        title="test 3"
+        previewText="Hi there 3...."
+      />
     </section>
   </div>
 </template>
 
 <script>
-export default {};
+import PostPreview from '@/components/Posts/PostPreview';
+export default {
+  components: {
+    PostPreview
+  }
+};
 </script>
 
 <style scoped>
@@ -74,41 +73,5 @@ export default {};
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-}
-
-.post-preview {
-  border: 1px solid #ccc;
-  box-shadow: 0 2px 2px #ccc;
-  background-color: white;
-  width: 90%;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
-@media (min-width: 850px) {
-  .post-preview {
-    width: 400px;
-    margin: 10px;
-  }
-}
-
-.post-thumbnail {
-  width: 100%;
-  height: 200px;
-  background-position: center;
-  background-size: cover;
-}
-
-.post-content {
-  padding: 10px;
-  text-align: center;
-}
-
-a:hover .post-content,
-a:active .post-content {
-  background-color: #ccc;
 }
 </style>
